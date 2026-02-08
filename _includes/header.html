@@ -1,0 +1,25 @@
+<header>
+  <div class="header">
+    <div class="logo">
+      <a href="/"><img src="/assets/images/logo.png" alt="{{ site.company_name }}"></a>
+      <span>Lic. {{ site.license }}</span>
+    </div>
+    
+    <aside class="contact-info" vocab="https://schema.org" typeof="Organization">
+      <span class="sr-only" property="name">{{ site.company_name }}</span>
+      
+      <a class="button" href="tel:{{ site.phone }}" property="telephone">
+        <img src="/assets/icons/phone.svg" alt="Phone">{{ site.phone }}
+      </a>
+      
+      <a class="button" href="mailto:{{ site.email }}" property="email">
+        <img src="/assets/icons/email.svg" alt="Email">{{ site.email }}
+      </a>
+    </aside>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services.html">Services</a>
+    <a href="/contact.html">Contact</a>
+  </nav>
+</header>

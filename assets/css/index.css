@@ -1,0 +1,171 @@
+:root {
+  --brand-color-0-rgb: 20, 25, 40;
+  --brand-color-1-rgb: 92, 135, 135;
+  --brand-color-2-rgb: 170, 101, 67;
+  --brand-color-3-rgb: 87, 124, 121;
+  --brand-color-4-rgb: 240, 240, 255;
+  --brand-color-0: rgb(var(--brand-color-0-rgb));
+  --brand-color-1: rgb(var(--brand-color-1-rgb));
+  --brand-color-2: rgb(var(--brand-color-2-rgb));
+  --brand-color-3: rgb(var(--brand-color-3-rgb));
+  --brand-color-4: rgb(var(--brand-color-4-rgb));
+  --bg-color: var(--brand-color-0);
+  --fg-color: var(--brand-color-4);
+  --logo-size: 14rem;
+}
+
+* {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0 2rem;
+}
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Layout */
+body {
+  background: var(--bg-color);
+  color: var(--fg-color);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+footer {
+  margin-top: 3rem;
+  color: var(--brand-color-3);
+}
+
+/* Logo */
+.logo {
+  padding: 1rem 0;
+  position: relative;
+}
+
+.logo img {
+  width: var(--logo-size);
+}
+
+.logo span {
+  font-size: 0.6rem;
+  position: absolute;
+  inset-inline-end: 0.75rem;
+  inset-block-end: 1.5rem;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: var(--brand-color-2);
+
+  border-radius: 1rem;
+}
+
+nav a {
+  color: var(--fg-color);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background-color: var(--brand-color-1);
+}
+
+/* Button */
+.button {
+  display: block;
+  background-color: rgba(var(--brand-color-2-rgb), 0.75);
+  color: var(--brand-color-4);
+  display: flex;
+  align-items: center;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  gap: 0.5em;
+}
+
+.button img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.button:hover {
+  background-color: rgba(var(--brand-color-2-rgb), 1);
+}
+
+.button.big {
+  font-size: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Info grid */
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-grid-item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  text-align: right;
+  gap: 1rem;
+}
+
+.info-grid-item img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+}
+
+.info-grid-item:nth-child(even) {
+  flex-direction: row;
+}
+
+.info-grid-item:nth-child(even) p {
+  text-align: left;
+}
+
+/* Utils */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
