@@ -78,6 +78,12 @@ footer {
   color: var(--brand-color-3);
 }
 
+.list-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 /* Logo */
 .logo {
   padding: 1rem 0;
@@ -141,10 +147,11 @@ nav a:focus-visible {
 
 /* List */
 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   padding-inline-start: 1.5rem;
-}
-li {
-  margin: 0.5rem 0;
+  margin-block: 0;
 }
 
 /* Button */
@@ -279,6 +286,7 @@ blockquote {
 
   main {
     padding: 1rem;
+    overflow: hidden; /* clear image floats */
   }
 
   .button.big {
