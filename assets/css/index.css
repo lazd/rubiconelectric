@@ -71,6 +71,7 @@ main {
   border-radius: 2rem;
 
   color: var(--brand-color-4);
+  overflow: hidden; /* clear image floats */
 }
 
 footer {
@@ -286,7 +287,6 @@ blockquote {
 
   main {
     padding: 1rem;
-    overflow: hidden; /* clear image floats */
   }
 
   .button.big {
