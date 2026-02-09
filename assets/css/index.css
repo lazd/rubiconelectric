@@ -23,11 +23,17 @@
 
 html, body {
   margin: 0;
+}
+body {
   padding: 0 2rem;
 }
+
 /* Typography */
 h1, h2, h3 {
   font-weight: 600;
+}
+h1 {
+  font-size: 2rem;
 }
 
 /* Layout */
@@ -78,6 +84,8 @@ nav {
   justify-content: center;
   gap: 2rem;
   background: var(--brand-color-2);
+  overflow-x: auto;
+  width: 100%;
 
   border-radius: 1rem;
 }
@@ -122,7 +130,7 @@ nav a:hover {
 }
 
 .button-group {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 2rem;
   padding: 1rem;
@@ -168,4 +176,36 @@ nav a:hover {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  .button .label {
+    display: none;
+  }
+  nav {
+    gap: 0;
+  }
+  nav a {
+    padding: 1rem 1.25rem;
+  }
+  body {
+    padding: 0 1rem;
+  }
+  .button.big {
+    font-size: 1.15rem;
+  }
+  .button-group {
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .info-grid-item img {
+    width: 6rem;
+    height: 6rem;
+  }  
 }
