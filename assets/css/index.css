@@ -4,11 +4,13 @@
   --brand-color-2-rgb: 170, 101, 67;
   --brand-color-3-rgb: 87, 124, 121;
   --brand-color-4-rgb: 240, 240, 255;
+  --brand-color-5-rgb: 26, 64, 61;
   --brand-color-0: rgb(var(--brand-color-0-rgb));
   --brand-color-1: rgb(var(--brand-color-1-rgb));
   --brand-color-2: rgb(var(--brand-color-2-rgb));
   --brand-color-3: rgb(var(--brand-color-3-rgb));
   --brand-color-4: rgb(var(--brand-color-4-rgb));
+  --brand-color-5: rgb(var(--brand-color-5-rgb));
   --bg-color: var(--brand-color-0);
   --fg-color: var(--brand-color-4);
   --logo-size: 14rem;
@@ -82,6 +84,17 @@ footer {
   position: relative;
 }
 
+.logo a:focus-visible {
+  outline: 2px solid var(--brand-color-4);
+  outline-offset: 0;
+  border-radius: 1rem;
+  background-color: var(--brand-color-5);
+}
+
+.logo a {
+  display: block;
+}
+
 .logo img {
   width: var(--logo-size);
 }
@@ -116,8 +129,14 @@ nav a {
   align-items: center;
 }
 
+nav a:focus-visible,
 nav a:hover {
   background-color: var(--brand-color-1);
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--brand-color-4);
+  outline-offset: 2px;
 }
 
 /* List */
@@ -148,8 +167,14 @@ li {
   height: 1.5em;
 }
 
+.button:focus-visible,
 .button:hover {
-  background-color: rgba(var(--brand-color-2-rgb), 1);
+  background-color: var(--brand-color-3);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--brand-color-4);
+  outline-offset: 2px;
 }
 
 .button.big {
@@ -189,6 +214,24 @@ li {
   text-align: right;
 }
 
+/* About decorations */
+.inline-image {
+  float: left;
+  margin: 0 0.75rem 0.5rem 0;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 2px rgba(var(--brand-color-5-rgb), 0.5);
+}
+
+blockquote {
+  display: inline-block;
+  margin-inline-start: 1rem;
+  margin-block: 0;
+  border-left: 2px solid rgba(var(--brand-color-1-rgb), 0.75);
+  padding-left: 1rem;
+}
+
 /* Utils */
 .sr-only {
   position: absolute;
@@ -214,7 +257,15 @@ li {
     font-size: 1.5rem;
   }
   .button .label {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
   nav {
     gap: 0;
